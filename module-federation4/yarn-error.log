@@ -1,0 +1,69 @@
+Arguments: 
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js install
+
+PATH: 
+  /mnt/c/Users/YY/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Python27/:/mnt/c/Python27/Scripts:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files (x86)/Yarn/bin/:/mnt/c/Users/YY/scoop/shims:/mnt/c/Users/YY/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/YY/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/YY/AppData/Roaming/npm:/mnt/c/Users/YY/AppData/Local/Yarn/bin:/mnt/c/Users/YY/AppData/Local/Programs/Fiddler:/mnt/c/Program Files/JetBrains/WebStorm 2019.3.4/bin:/snap/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.14.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /mnt/c/Users/YY/.cache/yarn/v6/npm-@types-tapable-1.0.5-9adbc12950582aa65ead76bffdf39fe0c27a3c02-integrity/node_modules/@types/tapable/.yarn-metadata.json: Unexpected token = in JSON at position 3430
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "webpack-plugin-module-federation",
+    "version": "1.0.0-beta-1",
+    "description": "",
+    "main": "./lib/index.js",
+    "scripts": {
+      "test": "yarn build && jest",
+      "dev": "tsc -w",
+      "build": "tsc",
+      "dev:example": "cross-env NODE_ENV=development concurrently --raw \"cd examples/website1 && npm start\" \"cd examples/website2 && npm start\"",
+      "install:example": "concurrently --raw \"cd examples/website1 && yarn install\" \"cd examples/website2 && yarn install\"",
+      "clean:example": "concurrently --raw \"cd examples/website1 && rm -rf node_modules\" \"cd examples/website2 && rm -rf node_modules\"",
+      "clean": "npm run clean:example && rm -rf node_modules"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@babel/core": "^7.9.0",
+      "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
+      "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+      "@babel/preset-env": "^7.9.5",
+      "@types/expect": "^24.3.0",
+      "@types/jest": "^25.2.1",
+      "@types/webpack": "^4.41.12",
+      "babel-loader": "^8.1.0",
+      "concurrently": "^5.1.0",
+      "cross-env": "^7.0.2",
+      "jest": "^25.4.0",
+      "serve": "^11.3.0",
+      "shelljs": "^0.8.3",
+      "typescript": "^3.8.3",
+      "webpack": "^4.42.1",
+      "webpack-cli": "^3.3.11"
+    },
+    "files": [
+      "index.js",
+      "lib"
+    ]
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
